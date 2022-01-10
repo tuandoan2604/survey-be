@@ -40,9 +40,8 @@ const userSchema = mongoose.Schema({
     type: Boolean,
     default: false,
   },
-  refreshtoken: {
+  avatar: {
     type: String,
-    require: true,
   },
   createdAt: {
     type: Date,
