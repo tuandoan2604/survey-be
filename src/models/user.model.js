@@ -42,6 +42,8 @@ const userSchema = mongoose.Schema({
   },
   avatar: {
     type: String,
+    require: true,
+    default: 'https://tuannodevbucket.s3.ap-southeast-1.amazonaws.com/images/avatar-default.png',
   },
   createdAt: {
     type: Date,
