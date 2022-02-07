@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const validator = require('validator');
 const bcrypt = require('bcryptjs');
 const { toJSON, paginate } = require('./plugins');
 const { roles } = require('../config/roles');
@@ -43,7 +42,7 @@ const userSchema = mongoose.Schema({
   avatar: {
     type: String,
     require: true,
-    default: 'https://tuannodevbucket.s3.ap-southeast-1.amazonaws.com/images/avatar-default.png',
+    default: 'https://tuannodevbuckettest.s3.ap-southeast-1.amazonaws.com/avatar-default.png',
   },
   createdAt: {
     type: Date,
