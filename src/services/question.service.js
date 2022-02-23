@@ -60,7 +60,8 @@ const deleteQuestionById = async (questionId) => {
  * @returns {Promise<QueryResult>}
  */
 const queryQuestions = async (filter, options) => {
-  const questions = await Question.paginate(filter, options);
+  const exclude = { correctanswer: 0 };
+  const questions = await Question.paginate(filter, options, exclude);
   return questions;
 };
 
